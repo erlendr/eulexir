@@ -1,12 +1,12 @@
 defmodule Fib do
-  def fib(_, b, list) when b > 400_000_000 do
-    list
-  end
-
   def fib(a, b, list) do
     num = a + b
-    res = list ++ [num]
-    fib(b, num, res)
+    if num > 400_000_0 do
+      list
+    else
+      res = list ++ [num]
+      fib(b, num, res)
+    end
   end
 end
 
